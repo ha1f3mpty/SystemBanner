@@ -1,4 +1,12 @@
 @ECHO OFF
+SETLOCAL EnableExtensions
+
+REM Ensure %ProgramFiles% points at 64-bit Program Files even if invoked from 32-bit cmd.exe
+
+IF DEFINED ProgramW6432 SET "ProgramFiles=%ProgramW6432%"
+
+SET "PERCENT=%%"
+SET "EXPECTED_RUN_VALUE=%PERCENT%ProgramFiles%PERCENT%\SystemBanner\SystemBanner.exe"
 CLS
 
 REM ============================================================
