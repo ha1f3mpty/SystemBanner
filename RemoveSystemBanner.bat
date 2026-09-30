@@ -5,8 +5,7 @@ REM Ensure %ProgramFiles% points at 64-bit Program Files even if invoked from 32
 
 IF DEFINED ProgramW6432 SET "ProgramFiles=%ProgramW6432%"
 
-SET "PERCENT=%%"
-SET "EXPECTED_RUN_VALUE=%PERCENT%ProgramFiles%PERCENT%\SystemBanner\SystemBanner.exe"
+REM (unused variables removed)
 CLS
 
 REM ============================================================
