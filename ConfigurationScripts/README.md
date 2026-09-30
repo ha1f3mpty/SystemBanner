@@ -2,7 +2,7 @@
 
 This directory contains PowerShell scripts for configuring and removing SystemBanner on Windows.
 
-The scripts are intended to provide an alternative to the existing GPO, gpedit.msc, and manual registry methods and are used to automate configuration and uninstallation when you do not have Group Policy (Cloud Only) or no access to gpedit.msc (Windows Home Edition). 
+The scripts are intended to provide an alternative to the existing GPO, gpedit.msc, and manual registry methods and are used to automate configuration and uninstallation when you do not have Group Policy (Cloud Only) or you do not have access to gpedit.msc (Windows Home Edition). 
 
 The scripts are in Detect/Remediate pairs for deployment via your favorite endpoint management platform such as Microsoft Intune or Automox.
 
@@ -12,7 +12,7 @@ The scripts are in Detect/Remediate pairs for deployment via your favorite endpo
 
 `systemBannerUninstall-Detect.ps1` and `systemBannerUninstall-Remediate.ps1`
 
-Detects installation of SystemBanner, if detected it removes SystemBanner and its associated configuration:
+Detects the installation of SystemBanner. If  SystemBanner is detected it removes SystemBanner and its associated configuration:
 
 * Stops the SystemBanner process
 * Removes the machine-wide startup entry

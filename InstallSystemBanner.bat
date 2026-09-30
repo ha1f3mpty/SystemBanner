@@ -57,7 +57,7 @@ REM ------------------------------------------------------------
 REM SystemBanner application files
 REM ------------------------------------------------------------
 ECHO Copying SystemBanner files...
-COPY "%~dp0Code\SystemBanner\SystemBanner\bin\Release\SystemBanner*" "%ProgramFiles%\SystemBanner\" >NUL
+COPY /Y "%~dp0Code\SystemBanner\SystemBanner\bin\Release\SystemBanner*" "%ProgramFiles%\SystemBanner\" >NUL
 IF ERRORLEVEL 1 (
     SET "INSTALL_STATUS=FAILED"
 ) ELSE (
@@ -80,7 +80,7 @@ REM ------------------------------------------------------------
 REM SystemBanner ADMX
 REM ------------------------------------------------------------
 ECHO Copying SystemBanner.admx...
-COPY "%~dp0Group Policy\SystemBanner.admx" "%WINDIR%\PolicyDefinitions\" >NUL
+COPY /Y"%~dp0Group Policy\SystemBanner.admx" "%WINDIR%\PolicyDefinitions\" >NUL
 IF ERRORLEVEL 1 (
     SET "INSTALL_STATUS=FAILED"
 ) ELSE (
@@ -94,7 +94,7 @@ REM ------------------------------------------------------------
 REM SystemBanner ADML
 REM ------------------------------------------------------------
 ECHO Copying SystemBanner.adml...
-COPY "%~dp0Group Policy\en-US\SystemBanner.adml" "%WINDIR%\PolicyDefinitions\en-US\" >NUL
+COPY /Y "%~dp0Group Policy\en-US\SystemBanner.adml" "%WINDIR%\PolicyDefinitions\en-US\" >NUL
 IF ERRORLEVEL 1 (
     SET "INSTALL_STATUS=FAILED"
 ) ELSE (
