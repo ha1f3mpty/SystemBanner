@@ -142,6 +142,16 @@ IF NOT ERRORLEVEL 1 (
 ) ELSE (
     SET "RUN_STATUS=NOT INSTALLED"
 )
+ REM ------------------------------------------------------------
+ REM Policy configuration
+ REM ------------------------------------------------------------
+ ECHO Removing SystemBanner policy registry key...
+ REG QUERY "HKLM\Software\Policies\SystemBanner" >NUL 2>&1
+ IF NOT ERRORLEVEL 1 (
+     REG DELETE "HKLM\Software\Policies\SystemBanner" /F >NUL
+     REG QUERY "HKLM\Software\Policies\SystemBanner" >NUL 2>&1
+     IF NOT ERRORLEVEL 1 SET "REMOVE_STATUS=FAILED"
+ )
 REM ============================================================
 REM Removal summary
 REM ============================================================

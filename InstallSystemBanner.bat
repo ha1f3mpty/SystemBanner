@@ -130,7 +130,6 @@ REM ------------------------------------------------------------
 REM Startup
 REM ------------------------------------------------------------
 ECHO Adding SystemBanner startup entry...
-ECHO Adding SystemBanner startup entry...
 REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "SystemBanner" /T REG_EXPAND_SZ /D "%EXPECTED_RUN_VALUE%" /F
 IF ERRORLEVEL 1 (
     SET "RUN_STATUS=FAILED"
