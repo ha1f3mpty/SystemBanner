@@ -80,7 +80,7 @@ REM ------------------------------------------------------------
 REM SystemBanner ADMX
 REM ------------------------------------------------------------
 ECHO Copying SystemBanner.admx...
-COPY /Y"%~dp0Group Policy\SystemBanner.admx" "%WINDIR%\PolicyDefinitions\" >NUL
+COPY /Y "%~dp0Group Policy\SystemBanner.admx" "%WINDIR%\PolicyDefinitions\" >NUL
 IF ERRORLEVEL 1 (
     SET "INSTALL_STATUS=FAILED"
 ) ELSE (

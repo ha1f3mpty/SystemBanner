@@ -12,7 +12,7 @@ The scripts are in Detect/Remediate pairs for deployment via your favorite endpo
 
 `systemBannerUninstall-Detect.ps1` and `systemBannerUninstall-Remediate.ps1`
 
-Detects the installation of SystemBanner. If  SystemBanner is detected it removes SystemBanner and its associated configuration:
+Detects the installation of SystemBanner. If SystemBanner is detected it removes SystemBanner and its associated configuration:
 
 * Stops the SystemBanner process
 * Removes the machine-wide startup entry
